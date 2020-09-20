@@ -39,3 +39,8 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.genruntimeconfig.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.csproj.CopyComplete
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.DataAccess.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.DataAccess.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.Services.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.Services.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Index.cshtml.g.cs

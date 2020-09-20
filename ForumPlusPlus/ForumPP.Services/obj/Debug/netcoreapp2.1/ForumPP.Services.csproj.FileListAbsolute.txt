@@ -1,0 +1,12 @@
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.Services.deps.json
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.Services.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.Services.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.DataAccess.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.DataAccess.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.csprojAssemblyReference.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.AssemblyInfoInputs.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.AssemblyInfo.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.csproj.CoreCompileInputs.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.csproj.CopyComplete
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.pdb
