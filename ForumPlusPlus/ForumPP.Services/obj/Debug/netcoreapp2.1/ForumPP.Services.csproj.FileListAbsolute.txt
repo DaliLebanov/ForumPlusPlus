@@ -10,3 +10,5 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\net
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.csproj.CopyComplete
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.dll
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\obj\Debug\netcoreapp2.1\ForumPP.Services.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.WebModels.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.Services\bin\Debug\netcoreapp2.1\ForumPP.WebModels.pdb

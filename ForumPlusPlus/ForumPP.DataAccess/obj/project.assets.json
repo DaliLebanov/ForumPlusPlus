@@ -5257,6 +5257,16 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "ForumPP.WebModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ForumPP.WebModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ForumPP.WebModels.dll": {}
+        }
       }
     }
   },
@@ -14018,18 +14028,25 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "ForumPP.WebModels/1.0.0": {
+      "type": "project",
+      "path": "../ForumPP.WebModels/ForumPP.WebModels.csproj",
+      "msbuildProject": "../ForumPP.WebModels/ForumPP.WebModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "ForumPP.WebModels >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.1.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.1",
-      "Microsoft.EntityFrameworkCore >= 2.1.1",
+      "Microsoft.EntityFrameworkCore.Tools >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dali\\.nuget\\packages\\": {}
+    "C:\\Users\\Dali\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -14040,6 +14057,9 @@
       "packagesPath": "C:\\Users\\Dali\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Dali\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -14053,7 +14073,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.WebModels\\ForumPP.WebModels.csproj": {
+              "projectPath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.WebModels\\ForumPP.WebModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -14073,7 +14097,9 @@
             "target": "Package",
             "version": "[2.1.1, )"
           },
-          "Microsoft.EntityFrameworkCore": {
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.1, )"
           },

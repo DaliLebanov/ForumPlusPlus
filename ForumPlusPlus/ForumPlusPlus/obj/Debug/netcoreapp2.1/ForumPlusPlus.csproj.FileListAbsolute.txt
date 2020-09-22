@@ -44,3 +44,10 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.Services.dll
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.Services.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Index.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Topic.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Post\Index.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.WebModels.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.WebModels.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs

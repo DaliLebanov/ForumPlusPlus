@@ -5,8 +5,11 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\bin\Debug\n
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\bin\Debug\netcoreapp2.1\ForumPP.DataAccess.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.AssemblyInfoInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.AssemblyInfo.cs
-C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.dll
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.genruntimeconfig.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.csprojAssemblyReference.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\bin\Debug\netcoreapp2.1\ForumPP.WebModels.dll
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\bin\Debug\netcoreapp2.1\ForumPP.WebModels.pdb
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.DataAccess\obj\Debug\netcoreapp2.1\ForumPP.DataAccess.csproj.CopyComplete

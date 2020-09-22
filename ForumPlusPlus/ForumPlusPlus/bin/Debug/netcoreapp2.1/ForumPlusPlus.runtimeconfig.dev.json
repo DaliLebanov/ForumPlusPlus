@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\Dali\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Dali\\.nuget\\packages"
+      "C:\\Users\\Dali\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

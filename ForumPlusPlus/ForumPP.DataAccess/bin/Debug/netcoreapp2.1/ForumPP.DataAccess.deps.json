@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "ForumPP.DataAccess/1.0.0": {
+        "dependencies": {
+          "ForumPP.WebModels": "1.0.0"
+        },
         "runtime": {
           "ForumPP.DataAccess.dll": {}
+        }
+      },
+      "ForumPP.WebModels/1.0.0": {
+        "runtime": {
+          "ForumPP.WebModels.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ForumPP.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ForumPP.WebModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

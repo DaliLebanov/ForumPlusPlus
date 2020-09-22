@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumPlusPlus", "ForumPlusP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumPP.DataAccess", "ForumPP.DataAccess\ForumPP.DataAccess.csproj", "{81E177A0-2CD4-4A66-97CF-902CB5BF394F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumPP.Services", "ForumPP.Services\ForumPP.Services.csproj", "{1416A423-1113-4C30-81F3-C3BB1825ED9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumPP.Services", "ForumPP.Services\ForumPP.Services.csproj", "{1416A423-1113-4C30-81F3-C3BB1825ED9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumPP.WebModels", "ForumPP.WebModels\ForumPP.WebModels.csproj", "{BF7BF2CC-D6EB-49B9-A16F-879B5B79809A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1416A423-1113-4C30-81F3-C3BB1825ED9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1416A423-1113-4C30-81F3-C3BB1825ED9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1416A423-1113-4C30-81F3-C3BB1825ED9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7BF2CC-D6EB-49B9-A16F-879B5B79809A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7BF2CC-D6EB-49B9-A16F-879B5B79809A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7BF2CC-D6EB-49B9-A16F-879B5B79809A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7BF2CC-D6EB-49B9-A16F-879B5B79809A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

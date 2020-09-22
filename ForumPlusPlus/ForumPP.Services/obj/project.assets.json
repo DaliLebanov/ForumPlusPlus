@@ -2102,18 +2102,6 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/2.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.1.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {}
-        }
-      },
       "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -5257,15 +5245,25 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "ForumPP.WebModels": "1.0.0",
           "Microsoft.AspNetCore.All": "2.1.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
-          "Microsoft.EntityFrameworkCore": "2.1.1"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1"
         },
         "compile": {
           "bin/placeholder/ForumPP.DataAccess.dll": {}
         },
         "runtime": {
           "bin/placeholder/ForumPP.DataAccess.dll": {}
+        }
+      },
+      "ForumPP.WebModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ForumPP.WebModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ForumPP.WebModels.dll": {}
         }
       }
     }
@@ -7201,30 +7199,6 @@
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.2.1.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Tools/2.1.1": {
-      "sha512": "Qfz8Au39cALAgxzvfoz6aPkmTuaFmlDYeUjCecaNlQ5x2jxs1rACtWddA5Yu4D3YSsHuHqttgZA6tzKKNVo9mg==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/2.1.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.tools.2.1.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.tools.nuspec",
-        "tools/EntityFrameworkCore.PowerShell2.psd1",
-        "tools/EntityFrameworkCore.PowerShell2.psm1",
-        "tools/EntityFrameworkCore.psd1",
-        "tools/EntityFrameworkCore.psm1",
-        "tools/about_EntityFrameworkCore.help.txt",
-        "tools/init.ps1",
-        "tools/install.ps1",
-        "tools/net461/any/ef.exe",
-        "tools/net461/win-x86/ef.exe",
-        "tools/netcoreapp2.0/any/ef.dll",
-        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
@@ -14033,16 +14007,23 @@
       "type": "project",
       "path": "../ForumPP.DataAccess/ForumPP.DataAccess.csproj",
       "msbuildProject": "../ForumPP.DataAccess/ForumPP.DataAccess.csproj"
+    },
+    "ForumPP.WebModels/1.0.0": {
+      "type": "project",
+      "path": "../ForumPP.WebModels/ForumPP.WebModels.csproj",
+      "msbuildProject": "../ForumPP.WebModels/ForumPP.WebModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "ForumPP.DataAccess >= 1.0.0",
+      "ForumPP.WebModels >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dali\\.nuget\\packages\\": {}
+    "C:\\Users\\Dali\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -14053,6 +14034,9 @@
       "packagesPath": "C:\\Users\\Dali\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.Services\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Dali\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -14069,6 +14053,9 @@
           "projectReferences": {
             "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.DataAccess\\ForumPP.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.DataAccess\\ForumPP.DataAccess.csproj"
+            },
+            "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.WebModels\\ForumPP.WebModels.csproj": {
+              "projectPath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.WebModels\\ForumPP.WebModels.csproj"
             }
           }
         }

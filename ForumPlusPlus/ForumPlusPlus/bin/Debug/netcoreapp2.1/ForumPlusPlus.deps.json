@@ -1396,9 +1396,9 @@
       },
       "ForumPP.DataAccess/1.0.0": {
         "dependencies": {
+          "ForumPP.WebModels": "1.0.0",
           "Microsoft.AspNetCore.All": "2.1.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
-          "Microsoft.EntityFrameworkCore": "2.1.1"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1"
         },
         "runtime": {
           "ForumPP.DataAccess.dll": {}
@@ -1409,13 +1409,22 @@
       },
       "ForumPP.Services/1.0.0": {
         "dependencies": {
-          "ForumPP.DataAccess": "1.0.0"
+          "ForumPP.DataAccess": "1.0.0",
+          "ForumPP.WebModels": "1.0.0"
         },
         "runtime": {
           "ForumPP.Services.dll": {}
         },
         "compile": {
           "ForumPP.Services.dll": {}
+        }
+      },
+      "ForumPP.WebModels/1.0.0": {
+        "runtime": {
+          "ForumPP.WebModels.dll": {}
+        },
+        "compile": {
+          "ForumPP.WebModels.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -5021,6 +5030,11 @@
       "sha512": ""
     },
     "ForumPP.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ForumPP.WebModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForumPP.DataAccess\ForumPP.DataAccess.csproj" />
+    <ProjectReference Include="..\ForumPP.WebModels\ForumPP.WebModels.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,9 @@ namespace ForumPP.DataAccess.DbModels
 {
     public class User:IdentityUser
     {
-        public string FullName { get; set; }
+        public int Rating { get; set; }
+        public string ProfileImageUrl { get; set; }
+        public DateTime MemberSince { get; set; }
+        public bool IsActive { get; set; }
     }
 }

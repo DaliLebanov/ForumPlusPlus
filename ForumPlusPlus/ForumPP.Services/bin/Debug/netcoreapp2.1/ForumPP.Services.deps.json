@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.1": {
       "ForumPP.Services/1.0.0": {
         "dependencies": {
-          "ForumPP.DataAccess": "1.0.0"
+          "ForumPP.DataAccess": "1.0.0",
+          "ForumPP.WebModels": "1.0.0"
         },
         "runtime": {
           "ForumPP.Services.dll": {}
@@ -270,7 +271,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.1",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.1.1",
-          "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.Extensions.Caching.Abstractions": "2.1.1",
           "Microsoft.Extensions.Caching.Memory": "2.1.1",
           "Microsoft.Extensions.Caching.Redis": "2.1.1",
@@ -1934,11 +1934,6 @@
             "assemblyVersion": "2.1.1.0",
             "fileVersion": "2.1.1.18157"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/2.1.1": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.1.1"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
@@ -3883,12 +3878,17 @@
       },
       "ForumPP.DataAccess/1.0.0": {
         "dependencies": {
+          "ForumPP.WebModels": "1.0.0",
           "Microsoft.AspNetCore.All": "2.1.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
-          "Microsoft.EntityFrameworkCore": "2.1.1"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1"
         },
         "runtime": {
           "ForumPP.DataAccess.dll": {}
+        }
+      },
+      "ForumPP.WebModels/1.0.0": {
+        "runtime": {
+          "ForumPP.WebModels.dll": {}
         }
       }
     }
@@ -4794,13 +4794,6 @@
       "sha512": "sha512-/J15ItbPu+YWmqCs7yDrXNSY9NooWv5sFKrV1aYvDjCi2Z4Ja8LOCQVNynJTjNxDfDihp+PPLD/HoD0e2iZD8Q==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.1.1",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.1.1.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Qfz8Au39cALAgxzvfoz6aPkmTuaFmlDYeUjCecaNlQ5x2jxs1rACtWddA5Yu4D3YSsHuHqttgZA6tzKKNVo9mg==",
-      "path": "microsoft.entityframeworkcore.tools/2.1.1",
-      "hashPath": "microsoft.entityframeworkcore.tools.2.1.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
       "type": "package",
@@ -6119,6 +6112,11 @@
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
     "ForumPP.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ForumPP.WebModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

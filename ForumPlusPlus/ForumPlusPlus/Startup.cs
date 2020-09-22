@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ForumPlusPlus.DataAccess;
 using ForumPP.DataAccess;
 using ForumPP.Services;
+using ForumPP.DataAccess.DbModels;
 
 namespace ForumPlusPlus
 {
@@ -27,7 +28,7 @@ namespace ForumPlusPlus
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -35,14 +36,20 @@ namespace ForumPlusPlus
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<IdentityUser>()
+            //services.AddTransient<UserManager<User>>();
+            //services.AddTransient<SignInManager<User>>();
+
+            services.AddIdentity<User,IdentityRole>(option=> 
+            {
+                option.User.RequireUniqueEmail = false;
+                option.Password.RequireNonAlphanumeric = false;
+            })
+                .AddRoleManager<RoleManager<IdentityRole>>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddTransient<IForum, ForumService>();
-
-
-
-
+            services.AddScoped<IForum, ForumService>();
+            services.AddScoped<IPost, PostService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -71,7 +78,7 @@ namespace ForumPlusPlus
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Forum}/{action=Index}/{id?}");
             });
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x4OhfGonWZPBFuT3dsQ5wmbdrB3xtACUVzayLiKNQDePPwcPlwi3SRo9+rb7snJpmu4YIELXe9l6Bqks+7oi+g==",
+  "dgSpecHash": "021jMfqZbEf4fKANPM8AoFHiQTF0QMuv4WYif2RBRIhP/gSPe443TG2zzYGBfc1USXZXiMl9/pBIzYsUdFUGjg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dali\\Desktop\\ForumPlusPlus\\ForumPlusPlus\\ForumPP.Services\\ForumPP.Services.csproj",
   "expectedPackageFiles": [
@@ -132,7 +132,6 @@
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\2.1.1\\microsoft.entityframeworkcore.sqlite.2.1.1.nupkg.sha512",
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\2.1.1\\microsoft.entityframeworkcore.sqlite.core.2.1.1.nupkg.sha512",
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\2.1.1\\microsoft.entityframeworkcore.sqlserver.2.1.1.nupkg.sha512",
-    "C:\\Users\\Dali\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\2.1.1\\microsoft.entityframeworkcore.tools.2.1.1.nupkg.sha512",
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.1.1\\microsoft.extensions.caching.memory.2.1.1.nupkg.sha512",
     "C:\\Users\\Dali\\.nuget\\packages\\microsoft.extensions.caching.redis\\2.1.1\\microsoft.extensions.caching.redis.2.1.1.nupkg.sha512",
