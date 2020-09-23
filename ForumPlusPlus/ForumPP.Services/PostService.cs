@@ -37,7 +37,11 @@ namespace ForumPP.Services
 
         public IEnumerable<Post> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Posts
+                .Include(p => p.User)
+                .Include(p => p.Replies)
+                     .ThenInclude(p => p.User)
+                 .Include(p => p.Forum);
         }
 
         public Post GetById(int id)
@@ -47,7 +51,7 @@ namespace ForumPP.Services
                  .Include(p => p.Replies)
                      .ThenInclude(p => p.User)
                  .Include(p => p.Forum)
-                 .First(f=>f.Id ==id);
+                 .First(f => f.Id == id);
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
@@ -58,6 +62,11 @@ namespace ForumPP.Services
         public IEnumerable<Post> GetForumPosts(int forumId)
         {
             return _context.Forums.FirstOrDefault(f => f.Id == forumId).Posts;
+        }
+
+        public IEnumerable<Post> GetLatestPosts(int n)
+        {
+            return GetAll().OrderByDescending(p => p.Created).Take(n);
         }
     }
 }

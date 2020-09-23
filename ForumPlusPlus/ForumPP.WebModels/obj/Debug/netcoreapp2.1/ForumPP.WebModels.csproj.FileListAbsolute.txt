@@ -6,4 +6,3 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.WebModels\obj\Debug\ne
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.WebModels\obj\Debug\netcoreapp2.1\ForumPP.WebModels.csproj.CoreCompileInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.WebModels\obj\Debug\netcoreapp2.1\ForumPP.WebModels.dll
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.WebModels\obj\Debug\netcoreapp2.1\ForumPP.WebModels.pdb
-C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPP.WebModels\obj\Debug\netcoreapp2.1\ForumPP.WebModels.csprojAssemblyReference.cache

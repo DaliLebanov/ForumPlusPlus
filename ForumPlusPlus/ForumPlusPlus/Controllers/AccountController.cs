@@ -21,7 +21,7 @@ namespace ForumPlusPlus.Controllers
             _userService = userService;
         }
 
-        public IActionResult Login(LoginViewModel model)
+        public IActionResult Login()
         {
             return View();
         }
@@ -33,14 +33,14 @@ namespace ForumPlusPlus.Controllers
             if (ModelState.IsValid)
             {
                 _userService.Login(model);
-                return RedirectToAction("Index", "Forum");
+                return RedirectToAction("Index", "home");
             }
             return View(model);
         }
 
         public IActionResult Register()
         {
-            return View(new RegisterViewModel());
+            return View();
         }
 
         [HttpPost]
@@ -49,7 +49,7 @@ namespace ForumPlusPlus.Controllers
             if (ModelState.IsValid)
             {
                 _userService.Register(model);
-                return RedirectToAction("Index", "Forum");
+                return RedirectToAction("Index", "home");
             }
             return View(model);
         }

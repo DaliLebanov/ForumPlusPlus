@@ -52,6 +52,11 @@ namespace ForumPP.Services
             return forum;
         }
 
+        public IEnumerable<Forum> GetLatestForums(int n)
+        {
+            return GetAll().OrderByDescending(f => f.Posts.Count()).Take(10);
+        }
+
         public Task UpdateForumDescription(int forumId, string newDescription)
         {
             throw new NotImplementedException();

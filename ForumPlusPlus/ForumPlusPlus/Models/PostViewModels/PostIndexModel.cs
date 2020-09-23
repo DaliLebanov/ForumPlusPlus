@@ -16,6 +16,9 @@ namespace ForumPlusPlus.Models.PostViewModels
         public string AuthorImageUrl { get; set; }
         public DateTime Created { get; set; }
         public string PostContent { get; set; }
+        public int ForumId { get; set; }
+        public string ForumTopic { get; set; }
+        public bool IsAuthorAdmin { get; set; }
 
         public IEnumerable<PostReplyViewModel> Replies{ get; set; }
     }

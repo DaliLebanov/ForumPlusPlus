@@ -36,8 +36,6 @@ namespace ForumPlusPlus
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            //services.AddTransient<UserManager<User>>();
-            //services.AddTransient<SignInManager<User>>();
 
             services.AddIdentity<User,IdentityRole>(option=> 
             {
@@ -78,7 +76,7 @@ namespace ForumPlusPlus
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Forum}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

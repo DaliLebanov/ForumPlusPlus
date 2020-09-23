@@ -29,13 +29,16 @@ namespace ForumPlusPlus.Controllers
                 {
                     Id = forum.Id,
                     Name = forum.Title,
-                    Description = forum.Description
+                    Description = forum.Description,
+                    PostsCount= forum.Posts.Count()
+                    
                 });
-
+            
+            
 
             var model = new ForumIndexModel
             {
-                forumViewModels = forums
+                ForumViewModels = forums
             };
 
             return View(model);

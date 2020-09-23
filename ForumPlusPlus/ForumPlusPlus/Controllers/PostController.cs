@@ -38,7 +38,11 @@ namespace ForumPlusPlus.Controllers
                 AuthorRating = post.User.Rating,
                 Created =post.Created,
                 PostContent=post.Content,
-                Replies=replies
+                Replies=replies,
+                ForumTopic=post.Forum.Title,
+                ForumId=post.Forum.Id,
+                IsAuthorAdmin = _userManager.GetRolesAsync(post.User).Result.Contains("Admin")
+
             };
              
             return View(model);
@@ -91,7 +95,8 @@ namespace ForumPlusPlus.Controllers
                AuthorImageUrl=r.User.ProfileImageUrl,
                AuthorRating=r.User.Rating,
                Created=r.Created,
-               ReplyContent=r.Content
+               ReplyContent=r.Content,
+               IsAuthorAdmin=_userManager.GetRolesAsync(r.User).Result.Contains("Admin")
             });
         }
     }
