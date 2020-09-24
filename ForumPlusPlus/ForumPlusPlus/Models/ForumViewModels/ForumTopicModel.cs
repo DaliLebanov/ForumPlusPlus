@@ -8,6 +8,7 @@ namespace ForumPlusPlus.Models.ForumViewModels
 {
     public class ForumTopicModel
     {
+        public string SearchQuery { get; set; }
         public ForumViewModel Forum { get; set; }
         public IEnumerable<PostViewModel> Posts { get; set; }
     }
