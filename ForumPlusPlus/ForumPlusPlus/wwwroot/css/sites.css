@@ -186,6 +186,23 @@ body {
     background-color:#212121;
     padding:8px 0px 24px 24px;
 }
+/*Custom Topic Page Styles*/
+
+.searchBar{
+    padding:3px 5px 2px 12px;
+    margin:8px;
+    background-color:#333;
+    width:10%;
+    transition: ease 0.3s;
+    border:none;
+}
+
+.searchBar:focus{
+    color:black;
+    width:60%;
+    background-color:#fff;
+}
+
 
 /*Custom Buttons*/
 #headingBtn{
@@ -249,6 +266,13 @@ body {
     transition: ease-in 0.2s;
     background-color:#00897B !important;
     color:#fff !important;
+}
+
+.btn-forumSearch{
+    background:none !important;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
 }
 /*Forum Index*/
 #forumIndexTable td {

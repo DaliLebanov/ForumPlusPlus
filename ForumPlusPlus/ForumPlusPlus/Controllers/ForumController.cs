@@ -44,10 +44,10 @@ namespace ForumPlusPlus.Controllers
             return View(model);
         }
 
-        public IActionResult Topic(int forumId)
+        public IActionResult Topic(int forumId, string searchQuery)
         {
             var forum = _forumService.GetById(forumId);
-            var posts = _postService.GetForumPosts(forumId);
+            var posts = _postService.GetSeacrhedPosts(forum, searchQuery);
 
             var postViewModels = posts.Select(p => new PostViewModel
             {
@@ -56,10 +56,10 @@ namespace ForumPlusPlus.Controllers
                 AuthorRating = p.User.Rating,
                 AuthorName = p.User.UserName,
                 Title = p.Title,
-                DatePosted=p.Created.ToString("dd/MM/yyyy"),
+                DatePosted = p.Created.ToString("dd/MM/yyyy"),
                 RepliesCount = p.Replies.Count(),
                 Forum = ForumViewModelMapper(forum)
-                
+
             });
 
             var model = new ForumTopicModel
@@ -69,6 +69,12 @@ namespace ForumPlusPlus.Controllers
             };
 
             return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Search(int forumId, string searchQuery)
+        {
+            return RedirectToAction("Topic", new { forumId, searchQuery });
         }
 
         private ForumViewModel ForumViewModelMapper(Forum forum)

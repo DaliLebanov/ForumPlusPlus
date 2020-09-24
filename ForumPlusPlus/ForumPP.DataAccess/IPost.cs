@@ -10,11 +10,12 @@ namespace ForumPP.DataAccess
     {
         Post GetById(int id);
         IEnumerable<Post> GetAll();
-        IEnumerable<Post> GetFilteredPosts(string searchQuery);
+        
         IEnumerable<Post> GetForumPosts(int forumId);
         Task Add(Post post);
         Task Delete(int id);
         Task EditPostContent(int id, string newContent);
         IEnumerable<Post> GetLatestPosts(int n);
+        IEnumerable<Post> GetSeacrhedPosts(Forum forum, string searchQuery);
     }
 }

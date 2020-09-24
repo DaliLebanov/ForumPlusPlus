@@ -54,10 +54,7 @@ namespace ForumPP.Services
                  .First(f => f.Id == id);
         }
 
-        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public IEnumerable<Post> GetForumPosts(int forumId)
         {
@@ -67,6 +64,15 @@ namespace ForumPP.Services
         public IEnumerable<Post> GetLatestPosts(int n)
         {
             return GetAll().OrderByDescending(p => p.Created).Take(n);
+        }
+
+        public IEnumerable<Post> GetSeacrhedPosts(Forum forum, string searchQuery)
+        {
+            return string.IsNullOrEmpty(searchQuery)
+                ? forum.Posts
+                : forum.Posts.Where(p
+                    => p.Title.Contains(searchQuery)
+                    || p.Content.Contains(searchQuery));
         }
     }
 }
