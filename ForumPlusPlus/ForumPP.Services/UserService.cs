@@ -4,9 +4,10 @@ using ForumPP.DataAccess.DbModels;
 using ForumPP.WebModels.AccontViewModels;
 using Microsoft.AspNetCore.Identity;
 using System;
+using Microsoft.AspNetCore.Hosting;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ForumPP.Services
 {
@@ -15,12 +16,14 @@ namespace ForumPP.Services
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         private readonly ApplicationDbContext _context;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public UserService(SignInManager<User> signInManager, UserManager<User> userManager, ApplicationDbContext context)
+        public UserService(SignInManager<User> signInManager, UserManager<User> userManager, ApplicationDbContext context, IHostingEnvironment hostingEnvironment)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _context = context;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         public IEnumerable<User> GetAll()
@@ -55,7 +58,9 @@ namespace ForumPP.Services
 
         public void Register(RegisterViewModel registerModel)
         {
-            var user = new User { UserName = registerModel.Email, MemberSince = DateTime.Now };
+            
+
+            var user = new User { UserName = registerModel.Email, MemberSince = DateTime.Now, ProfileImageUrl= "/images/users/DefaultUserImage.png" };
             var result = _userManager.CreateAsync(user, registerModel.Password).Result;
             if (result.Succeeded)
             {

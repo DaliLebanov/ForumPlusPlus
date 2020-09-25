@@ -89,7 +89,7 @@ using ForumPlusPlus.Models.SearchViewModels;
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(229, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aca754ba51c0403092ba6b386540bfaf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c28f7d2efe594da2a8feb67b4eed893c", async() => {
                 BeginContext(304, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();

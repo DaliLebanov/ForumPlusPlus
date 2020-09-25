@@ -37,7 +37,7 @@ namespace ForumPlusPlus.Controllers
                 Email = user.Email,
                 ProfileImageUrl = user.ProfileImageUrl,
                 MemberSince = user.MemberSince,
-                IsAdmin = _userManager.IsInRoleAsync(user, "Admin").Result
+                IsAdmin = _userManager.IsInRoleAsync(user, "admin").Result
             };
             
             return View(viewModel);

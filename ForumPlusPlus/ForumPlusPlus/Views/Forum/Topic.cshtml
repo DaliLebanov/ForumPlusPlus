@@ -53,7 +53,7 @@
                                     <div class="forumSubTitle">
                                         <div>
                                             <span class="postAuthor">
-                                                <a asp-controller="Profile" asp-action="Detail" asp-route-authorId="@post.AuthorId">
+                                                <a asp-controller="Profile" asp-action="Detail" asp-route-userId="@post.AuthorId">
                                                     @post.AuthorName
                                                 </a>
                                             </span>
@@ -79,7 +79,7 @@
         else
         {
             <div class="noPosts">
-                <i class="material-icons md-72">qustion_answer</i>
+                <i class="material-icons md-72">question_answer</i>
                 <h3>
                     It looks like there are no posts to be found.
                     Why not

@@ -13,7 +13,7 @@
     <div class="row" id="postIndexContent">
         <div class="col-md-3 postAuthorContainer">
             <div class="postAuthorImage" style="background-image:url(@Model.AuthorImageUrl)"></div>
-            <a asp-controller="Profile" asp-action="Detail" asp-route-authorId="@Model.AuthorId"> @Model.AuthorName</a>
+            <a asp-controller="Profile" asp-action="Detail" asp-route-userId="@Model.AuthorId"> @Model.AuthorName</a>
             <span class="postData">@Model.Created</span>
             @if (Model.IsAuthorAdmin)
             {
@@ -43,7 +43,7 @@
             <div class="row replyContent">
                 <div class="col-md-3 replyAuthorContainer">
                     <div class="postAuthorImage" style="background-image:url(@reply.AuthorImageUrl)"></div>
-                    <a asp-controller="Profile" asp-action="Detail" asp-route-authorId="@reply.AuthorId">
+                    <a asp-controller="Profile" asp-action="Detail" asp-route-userId="@reply.AuthorId">
                         @reply.AuthorName
                     </a>
                     @if (reply.IsAuthorAdmin)
