@@ -1,10 +1,12 @@
-﻿using ForumPP.DataAccess;
+﻿using ForumPlusPlus.DataAccess;
+using ForumPP.DataAccess;
 using ForumPP.DataAccess.DbModels;
 using ForumPP.WebModels.AccontViewModels;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ForumPP.Services
 {
@@ -12,11 +14,28 @@ namespace ForumPP.Services
     {
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
+        private readonly ApplicationDbContext _context;
 
-        public UserService(SignInManager<User> signInManager, UserManager<User> userManager)
+        public UserService(SignInManager<User> signInManager, UserManager<User> userManager, ApplicationDbContext context)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _context = context;
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+            return _context.Users;
+        }
+
+        public User GetById(string userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task IncementRating(string userId, Type type)
+        {
+            throw new NotImplementedException();
         }
 
         public void Login(LoginViewModel loginModel)
@@ -36,7 +55,7 @@ namespace ForumPP.Services
 
         public void Register(RegisterViewModel registerModel)
         {
-            var user = new User { UserName = registerModel.Email };
+            var user = new User { UserName = registerModel.Email, MemberSince = DateTime.Now };
             var result = _userManager.CreateAsync(user, registerModel.Password).Result;
             if (result.Succeeded)
             {
@@ -46,6 +65,14 @@ namespace ForumPP.Services
                     Password=registerModel.Password
                 });
             }
+        }
+
+        public async Task SetProfileImage(string userId, Uri uri)
+        {
+            var user = _userManager.FindByIdAsync(userId).Result;
+            user.ProfileImageUrl = uri.AbsoluteUri;
+            _context.Update(user);
+            await _context.SaveChangesAsync();
         }
     }
 }

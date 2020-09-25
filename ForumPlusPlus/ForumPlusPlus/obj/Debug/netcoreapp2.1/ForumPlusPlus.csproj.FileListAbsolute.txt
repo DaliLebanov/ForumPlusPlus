@@ -13,10 +13,8 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.csprojAssemblyReference.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.AssemblyInfoInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.AssemblyInfo.cs
-C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.csproj.CoreCompileInputs.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.RazorAssemblyInfo.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.RazorAssemblyInfo.cs
-C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.TagHelpers.input.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.TagHelpers.output.cache
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.RazorCoreGenerate.cache
@@ -52,3 +50,7 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.WebModels.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Search\Results.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\ForumPlusPlus.csproj.CoreCompileInputs.cache
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Profile\Index.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Profile\Detail.cshtml.g.cs

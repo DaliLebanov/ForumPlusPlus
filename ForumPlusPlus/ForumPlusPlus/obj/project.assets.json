@@ -5730,6 +5730,9 @@
       "ForumPP.WebModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.1"
+        },
         "compile": {
           "bin/placeholder/ForumPP.WebModels.dll": {}
         },

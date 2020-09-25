@@ -96,7 +96,7 @@ using ForumPlusPlus.Models.SearchViewModels;
             WriteLiteral("\r\n            </span>\r\n            <span id=\"headingBtn\"> ");
             EndContext();
             BeginContext(261, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6116f05eb2a4470b87867b74d883e9b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4eb243fa698a4d08b51eceae2d232d32", async() => {
                 BeginContext(362, 8, true);
                 WriteLiteral("Back to ");
                 EndContext();
@@ -153,7 +153,7 @@ WriteAttributeValue("", 596, Model.AuthorImageUrl, 596, 21, false);
             WriteLiteral("></div>\r\n            ");
             EndContext();
             BeginContext(640, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e39a81f961d14633ad5cabaa941f6103", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ded5e5f36ef424a8acc17c0eb88b26d", async() => {
                 BeginContext(725, 1, true);
                 WriteLiteral(" ");
                 EndContext();
@@ -243,7 +243,7 @@ WriteAttributeValue("", 596, Model.AuthorImageUrl, 596, 21, false);
             WriteLiteral("        <div class=\"row\">\r\n            <span>");
             EndContext();
             BeginContext(1282, 114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b58c11ba5c9459596a9e154d714c9f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "16e162213bc8448a9006481cdd507e5c", async() => {
                 BeginContext(1382, 10, true);
                 WriteLiteral("Post Reply");
                 EndContext();
@@ -312,7 +312,7 @@ WriteAttributeValue("", 1707, reply.AuthorImageUrl, 1707, 21, false);
             WriteLiteral("></div>\r\n                    ");
             EndContext();
             BeginContext(1759, 154, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dfa087c973014b85b0a4a011819ca4f9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1844f3b0d73b4471b1a42145c8885c28", async() => {
                 BeginContext(1844, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();

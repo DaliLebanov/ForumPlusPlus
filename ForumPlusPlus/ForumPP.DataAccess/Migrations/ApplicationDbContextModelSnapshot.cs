@@ -143,6 +143,10 @@ namespace ForumPP.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new { Id = "1afe9b22-eb1e-4eef-b7d8-ebe3467dd52e", AccessFailedCount = 0, ConcurrencyStamp = "040814e6-f70e-41fe-b12a-30a4c1afcf00", Email = "admin@mail.com", EmailConfirmed = true, IsActive = false, LockoutEnabled = false, MemberSince = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), NormalizedEmail = "admin@mail.com", NormalizedUserName = "ADMIN@MAIL.COM", PasswordHash = "AQAAAAEAACcQAAAAEAYS/Xff8StMSSojdXTQdZBh9SocQfliQPpdQi677C2IQWtO0tRTrwtugK/xBH2jTA==", PhoneNumberConfirmed = false, Rating = 0, SecurityStamp = "", TwoFactorEnabled = false, UserName = "admin@mail.com" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -167,6 +171,10 @@ namespace ForumPP.DataAccess.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new { Id = "538fd7ca-d851-4b6c-a32f-774b717ffe57", ConcurrencyStamp = "e9ef2f8b-2080-4ab6-9966-1a57aa06e359", Name = "admin", NormalizedName = "ADMIN" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -238,6 +246,10 @@ namespace ForumPP.DataAccess.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new { UserId = "1afe9b22-eb1e-4eef-b7d8-ebe3467dd52e", RoleId = "538fd7ca-d851-4b6c-a32f-774b717ffe57" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

@@ -49,6 +49,8 @@ namespace ForumPlusPlus
             services.AddScoped<IPost, PostService>();
             services.AddScoped<IUserService, UserService>();
 
+            services.AddScoped<IUploader, UploaderService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
