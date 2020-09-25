@@ -43,8 +43,13 @@ using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
+#line 7 "C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\Views\_ViewImports.cshtml"
+using ForumPlusPlus.Models.SearchViewModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2c315a2d9fb8ca48874ed38d83f59de9431efbe0", @"/Views/Post/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"959b71bb4870c0ab3519761e840da66a9afddcfc", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9b56adb87c7a88b1f0b0aef12d1f51c4cf3da8b", @"/Views/_ViewImports.cshtml")]
     public class Views_Post_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<PostIndexModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Forum", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -91,7 +96,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n            </span>\r\n            <span id=\"headingBtn\"> ");
             EndContext();
             BeginContext(261, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "22d43cdf2c5f4169be9b2f6a83bc96cd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6116f05eb2a4470b87867b74d883e9b3", async() => {
                 BeginContext(362, 8, true);
                 WriteLiteral("Back to ");
                 EndContext();
@@ -148,7 +153,7 @@ WriteAttributeValue("", 596, Model.AuthorImageUrl, 596, 21, false);
             WriteLiteral("></div>\r\n            ");
             EndContext();
             BeginContext(640, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6324ed37689d44e88c5b482f20584824", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e39a81f961d14633ad5cabaa941f6103", async() => {
                 BeginContext(725, 1, true);
                 WriteLiteral(" ");
                 EndContext();
@@ -238,7 +243,7 @@ WriteAttributeValue("", 596, Model.AuthorImageUrl, 596, 21, false);
             WriteLiteral("        <div class=\"row\">\r\n            <span>");
             EndContext();
             BeginContext(1282, 114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b16e1e97d2184b39be10988d129b919b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b58c11ba5c9459596a9e154d714c9f7", async() => {
                 BeginContext(1382, 10, true);
                 WriteLiteral("Post Reply");
                 EndContext();
@@ -307,7 +312,7 @@ WriteAttributeValue("", 1707, reply.AuthorImageUrl, 1707, 21, false);
             WriteLiteral("></div>\r\n                    ");
             EndContext();
             BeginContext(1759, 154, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "900894e59421488c9ac48054410a311b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dfa087c973014b85b0a4a011819ca4f9", async() => {
                 BeginContext(1844, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();

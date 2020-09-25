@@ -17,5 +17,6 @@ namespace ForumPP.DataAccess
         Task EditPostContent(int id, string newContent);
         IEnumerable<Post> GetLatestPosts(int n);
         IEnumerable<Post> GetSeacrhedPosts(Forum forum, string searchQuery);
+        IEnumerable<Post> FromAllSearchedPosts(string searchQuery);
     }
 }

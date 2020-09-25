@@ -74,5 +74,12 @@ namespace ForumPP.Services
                     => p.Title.Contains(searchQuery)
                     || p.Content.Contains(searchQuery));
         }
+
+        public IEnumerable<Post> FromAllSearchedPosts(string searchQuery)
+        {
+            return GetAll().Where(p => p.Title.Contains(searchQuery) 
+                                        ||
+                                       p.Content.Contains(searchQuery));
+        }
     }
 }

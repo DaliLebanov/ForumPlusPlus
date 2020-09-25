@@ -51,3 +51,4 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.WebModels.dll
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\bin\Debug\netcoreapp2.1\ForumPP.WebModels.pdb
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Search\Results.cshtml.g.cs
