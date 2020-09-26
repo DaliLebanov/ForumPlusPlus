@@ -4,13 +4,17 @@
    
     <div class="row userProfile">
         <div class="col-md-4">
-            <div id="userPorfileImage" style="background-image:url(@Model.ProfileImageUrl)"></div>
+            <img id="userPorfileImage" src="@Model.ProfileImageUrl"/>
             @if (User.Identity.Name == Model.UserName)
             {
                 <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="UploadProfileImage">
+                    @if(Model.ErrorMessage != null)
+                    {
+                        <div class="text-danger">@Model.ErrorMessage</div>
+                    }
                     <div id="upload">
                         <label class="btn btn-default btn-file  photoUploader">
-                            <div id="browse">Browse </div><input type="file" style="display:none" class="fileName" />
+                            <div id="browse">Browse </div><input type="file" name="file" style="display:none" class="fileName" />
                         </label>
                     </div>
                     <button type="submit" id="btn-profile" class="btn btn-default">Submit</button>

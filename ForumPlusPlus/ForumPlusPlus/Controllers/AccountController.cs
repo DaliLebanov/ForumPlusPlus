@@ -14,8 +14,7 @@ namespace ForumPlusPlus.Controllers
     public class AccountController : Controller
     {
         private readonly IUserService _userService;
-
-
+       
         public AccountController(IUserService userService)
         {
             _userService = userService;
@@ -27,13 +26,15 @@ namespace ForumPlusPlus.Controllers
         }
 
         [HttpPost]
-        public IActionResult LogIn(LoginViewModel model)
+        public IActionResult Login(LoginViewModel model)
         {
-            
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
-                _userService.Login(model);
-                return RedirectToAction("Index", "home");
+                if (_userService.Login(model).Succeeded)
+                {
+                    return RedirectToAction("Index", "home");
+                }
+                ModelState.AddModelError(string.Empty, "Username or Passwrod is incorrect");
             }
             return View(model);
         }

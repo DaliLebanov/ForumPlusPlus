@@ -58,14 +58,20 @@ namespace ForumPlusPlus.Controllers
                 Title = p.Title,
                 DatePosted = p.Created.ToString("dd/MM/yyyy"),
                 RepliesCount = p.Replies.Count(),
-                Forum = ForumViewModelMapper(forum)
+                Forum = new ForumViewModel
+                {
+                    Id = p.Forum.Id,
+                    Description = p.Forum.Description,
+                    Name = p.Forum.Title,
+                    ImageUrl = p.Forum.ImageUrl
+                }
 
             });
 
             var model = new ForumTopicModel
             {
                 Posts = postViewModels,
-                Forum = ForumViewModelMapper(forum)
+                Forum = postViewModels.Select(p => p.Forum).First()
             };
 
             return View(model);
@@ -75,17 +81,6 @@ namespace ForumPlusPlus.Controllers
         public IActionResult Search(int forumId, string searchQuery)
         {
             return RedirectToAction("Topic", new { forumId, searchQuery });
-        }
-
-        private ForumViewModel ForumViewModelMapper(Forum forum)
-        {
-            return new ForumViewModel
-            {
-                Id = forum.Id,
-                Description = forum.Description,
-                Name = forum.Title,
-                ImageUrl=forum.ImageUrl
-            };
         }
     }
 }

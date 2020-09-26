@@ -1,55 +1,54 @@
 ﻿@model RegisterViewModel
 
-<h3>Register new account!</h3>
-<br />
+
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <span asp-validation-summary=""></span>
+        <div class="col-md-4"></div>
+        <div class="col-md-8 ">
+            <h3>Register new account!</h3>
+            <br />
             <form asp-controller="Account" asp-action="register" method="post">
 
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4">
-                        <label asp-for="Email"></label>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-                            <input asp-for="Email" type="email" class="form-control" placeholder="Email" />
-                        </div>
-                    </div>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <label asp-for="Username"></label>
+                <span asp-validation-for="Username" class="text-danger"></span>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                    <input asp-for="Username" style="width:300px" type="text" class="form-control" placeholder="Username" />
+                </div>
 
-                </div>
                 <br />
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4">
-                        <label asp-for="Password"></label>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
-                            <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
-                        </div>
-                    </div>
 
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+                    <input asp-for="Email" style="width:300px" type="email" class="form-control" placeholder="Email" />
                 </div>
+
+
                 <br />
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-4">
-                        <label asp-for="ConfirmPassword"></label>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
-                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm password" />
-                        </div>
-                    </div>
+
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                    <input asp-for="Password" style="width:300px" type="password" class="form-control" placeholder="Password" />
                 </div>
+
                 <br />
-                <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-2">
-                        <button class="btn btn-success" type="submit">Register</button>
-                    </div>
+
+                <label asp-for="ConfirmPassword"></label>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                    <input asp-for="ConfirmPassword" style="width:300px" type="password" class="form-control" placeholder="Confirm password" />
                 </div>
+
+                <br />
+
+                <button class="btn btn-success" type="submit">Register</button>
             </form>
         </div>
     </div>

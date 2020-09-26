@@ -347,12 +347,11 @@ body {
     background-color: #fff;
 }
 
-#userPorfileImage{
-    display:inline-block;
-    width:200px;
-    height:200px;
-    background-color:#ddd;
-    background-size:100%;
+#userPorfileImage {
+    
+    max-width: 200px;
+    height: auto;
+    background-color: #ddd;
 }
 
 #userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
@@ -374,6 +373,10 @@ body {
     background-color: #fff;
     padding:24px;
 }
+
+
+
+
 
 
 /* Wrapping element */

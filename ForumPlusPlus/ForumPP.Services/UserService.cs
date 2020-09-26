@@ -41,14 +41,10 @@ namespace ForumPP.Services
             throw new NotImplementedException();
         }
 
-        public void Login(LoginViewModel loginModel)
+        public SignInResult Login(LoginViewModel loginModel)
         {
-           var result = _signInManager.PasswordSignInAsync(loginModel.Username, loginModel.Password, false, false).Result;
+           return _signInManager.PasswordSignInAsync(loginModel.Username, loginModel.Password, false, false).Result;
             
-            if (result.IsNotAllowed)
-            {
-                throw new Exception("Username or Password is not correct!");
-            }
         }
 
         public void Logout()
@@ -58,26 +54,23 @@ namespace ForumPP.Services
 
         public void Register(RegisterViewModel registerModel)
         {
-            
-
-            var user = new User { UserName = registerModel.Email, MemberSince = DateTime.Now, ProfileImageUrl= "/images/users/DefaultUserImage.png" };
+            var user = new User { UserName = registerModel.Username, Email= registerModel.Email, MemberSince = DateTime.Now, ProfileImageUrl= "/images/users/DefaultUserImage.png" };
             var result = _userManager.CreateAsync(user, registerModel.Password).Result;
             if (result.Succeeded)
             {
                 Login(new LoginViewModel()
                 {
-                    Username=registerModel.Email,
+                    Username=registerModel.Username,
                     Password=registerModel.Password
                 });
             }
         }
 
-        public async Task SetProfileImage(string userId, Uri uri)
+        public int SetProfileImage(User user, string fileName)
         {
-            var user = _userManager.FindByIdAsync(userId).Result;
-            user.ProfileImageUrl = uri.AbsoluteUri;
-            _context.Update(user);
-            await _context.SaveChangesAsync();
+            user.ProfileImageUrl = "/images/users/" + fileName;
+             _context.Update(user);
+            return _context.SaveChanges();
         }
     }
 }

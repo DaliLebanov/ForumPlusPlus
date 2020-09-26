@@ -14,6 +14,7 @@ namespace ForumPP.WebModels.AccontViewModels
         public string UserName { get; set; }
         public string UserRating { get; set; }
         public string ProfileImageUrl { get; set; }
+        public string ErrorMessage { get; set; }
         public bool IsAdmin { get; set; }
         public DateTime MemberSince { get; set; }
 
