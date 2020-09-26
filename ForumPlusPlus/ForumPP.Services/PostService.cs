@@ -41,7 +41,7 @@ namespace ForumPP.Services
                 .Include(p => p.User)
                 .Include(p => p.Replies)
                      .ThenInclude(p => p.User)
-                 .Include(p => p.Forum);
+                .Include(p => p.Forum);
         }
 
         public Post GetById(int id)
@@ -80,6 +80,12 @@ namespace ForumPP.Services
             return GetAll().Where(p => p.Title.Contains(searchQuery) 
                                         ||
                                        p.Content.Contains(searchQuery));
+        }
+
+        public int AddReply(PostReply reply)
+        {
+            _context.PostReplies.Add(reply);
+            return _context.SaveChanges();
         }
     }
 }

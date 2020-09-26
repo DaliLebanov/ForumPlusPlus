@@ -16,17 +16,34 @@ namespace ForumPlusPlus.Controllers
         private readonly IPost _postService;
         private readonly IForum _forumService;
         private readonly UserManager<User> _userManager;
-        public PostController(IPost postService, IForum forumService, UserManager<User> userManager)
+        private readonly IUserService _userService;
+        public PostController(IPost postService, 
+                                IForum forumService, 
+                                UserManager<User> userManager, 
+                                IUserService userService)
         {
             _postService = postService;
             _forumService = forumService;
             _userManager = userManager;
+            _userService = userService; 
         }
 
         public IActionResult Index(int postId)
         {
             var post = _postService.GetById(postId);
-            var replies = RepliesMapper(post.Replies);
+            
+            var replies = post.Replies.Select(r => new PostReplyViewModel
+            {
+                Id = r.Id,
+                AuthorName = r.User.UserName,
+                AuthorId = r.User.Id,
+                AuthorImageUrl = r.User.ProfileImageUrl,
+                AuthorRating = r.User.Rating,
+                Created = r.Created,
+                ReplyContent = r.Content,
+                IsAuthorAdmin = _userManager.GetRolesAsync(r.User).Result.Contains("Admin")
+
+            });
 
             var model = new PostIndexModel
             {
@@ -63,7 +80,7 @@ namespace ForumPlusPlus.Controllers
             return View(NewPostViewModel);
         }
         [HttpPost]
-        public async Task<IActionResult> Create(NewPostViewModel model)
+        public IActionResult Create(NewPostViewModel model)
         {
             var userId = _userManager.GetUserId(User);
             var user = _userManager.FindByIdAsync(userId).Result;
@@ -79,25 +96,10 @@ namespace ForumPlusPlus.Controllers
                 Forum = forum
             };
 
+
             _postService.Add(post).Wait();
+            _userService.IncementRating(user.Id, typeof(Post));
             return RedirectToAction("Index", "Post" , new { postId = post.Id});
-        }
-
-
-
-        private IEnumerable<PostReplyViewModel> RepliesMapper(IEnumerable<PostReply> replies)
-        {
-            return replies.Select(r => new PostReplyViewModel 
-            {
-               Id=r.Id,
-               AuthorName=r.User.UserName,
-               AuthorId=r.User.Id,
-               AuthorImageUrl=r.User.ProfileImageUrl,
-               AuthorRating=r.User.Rating,
-               Created=r.Created,
-               ReplyContent=r.Content,
-               IsAuthorAdmin=_userManager.GetRolesAsync(r.User).Result.Contains("Admin")
-            });
         }
     }
 }

@@ -236,16 +236,18 @@ body {
     transition: ease-in 0.2s;
 }
 
-.btn-file{
-    color:white;
-    width:200px;
-    background-color:#4FC3F7;
+.btn-file {
+    color: white;
+    width: 200px;
+    background-color: #4FC3F7;
     transition: ease 0.3s;
+    overflow: hidden;
 }
-.btn-file:hover{
-    background-color:#039BE5;
-    transition:ease 0.3s;
-}
+    .btn-file:hover {
+        background-color: #039BE5;
+        transition: ease 0.3s;
+        overflow: hidden;
+    }
 
 .btn-newPost{
     background-color:#c62828!important;

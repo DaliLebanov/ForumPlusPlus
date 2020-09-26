@@ -54,3 +54,4 @@ C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcor
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Profile\Index.cshtml.g.cs
 C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Profile\Detail.cshtml.g.cs
+C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\obj\Debug\netcoreapp2.1\Razor\Views\Reply\Create.cshtml.g.cs

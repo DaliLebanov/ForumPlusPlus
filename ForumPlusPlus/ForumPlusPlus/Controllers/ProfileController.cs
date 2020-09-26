@@ -50,6 +50,7 @@ namespace ForumPlusPlus.Controllers
             
             return View(viewModel);
         }
+
         [HttpPost]
         public IActionResult UploadProfileImage(IFormFile file)
         {

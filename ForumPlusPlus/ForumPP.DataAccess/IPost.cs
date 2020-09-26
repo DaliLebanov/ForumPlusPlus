@@ -18,5 +18,6 @@ namespace ForumPP.DataAccess
         IEnumerable<Post> GetLatestPosts(int n);
         IEnumerable<Post> GetSeacrhedPosts(Forum forum, string searchQuery);
         IEnumerable<Post> FromAllSearchedPosts(string searchQuery);
+        int AddReply(PostReply reply);
     }
 }

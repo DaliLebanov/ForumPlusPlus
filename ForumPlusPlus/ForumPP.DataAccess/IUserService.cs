@@ -16,6 +16,6 @@ namespace ForumPP.DataAccess
         User GetById(string userId);
         IEnumerable<User> GetAll();
         int SetProfileImage(User user, string fileName);
-        Task IncementRating(string userId, Type type);
+        int IncementRating(string userId, Type type);
     }
 }

@@ -30,7 +30,7 @@ namespace ForumPP.Services
 
         public IEnumerable<Forum> GetAll()
         {
-            return _context.Forums.Include(f=> f.Posts) ;
+            return _context.Forums.Include(f=> f.Posts);
         }
 
         public IEnumerable<User> GetAllActiveUsers()

@@ -36,9 +36,20 @@ namespace ForumPP.Services
             throw new NotImplementedException();
         }
 
-        public Task IncementRating(string userId, Type type)
+        public int IncementRating(string userId, Type type)
         {
-            throw new NotImplementedException();
+            var newUserRating = 0;
+            var user = _userManager.FindByIdAsync(userId).Result;
+
+            if (type == typeof(Post))
+                newUserRating = 1;
+            if (type == typeof(PostReply))
+                newUserRating = 3;
+
+            user.Rating += newUserRating;
+
+            _context.Users.Update(user);
+            return _context.SaveChanges();
         }
 
         public SignInResult Login(LoginViewModel loginModel)
@@ -68,8 +79,9 @@ namespace ForumPP.Services
 
         public int SetProfileImage(User user, string fileName)
         {
-            user.ProfileImageUrl = "/images/users/" + fileName;
+            user.ProfileImageUrl = $"/images/users/{fileName}";
              _context.Update(user);
+
             return _context.SaveChanges();
         }
     }

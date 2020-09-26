@@ -49,6 +49,14 @@ namespace ForumPlusPlus.Controllers
             var forum = _forumService.GetById(forumId);
             var posts = _postService.GetSeacrhedPosts(forum, searchQuery);
 
+            var forumViewModel = new ForumViewModel
+            {
+                Id=forum.Id,
+                Description=forum.Description,
+                Name=forum.Title,
+                ImageUrl=forum.ImageUrl
+            };
+
             var postViewModels = posts.Select(p => new PostViewModel
             {
                 Id = p.Id,
@@ -58,20 +66,14 @@ namespace ForumPlusPlus.Controllers
                 Title = p.Title,
                 DatePosted = p.Created.ToString("dd/MM/yyyy"),
                 RepliesCount = p.Replies.Count(),
-                Forum = new ForumViewModel
-                {
-                    Id = p.Forum.Id,
-                    Description = p.Forum.Description,
-                    Name = p.Forum.Title,
-                    ImageUrl = p.Forum.ImageUrl
-                }
-
             });
+
+           
 
             var model = new ForumTopicModel
             {
                 Posts = postViewModels,
-                Forum = postViewModels.Select(p => p.Forum).First()
+                Forum = forumViewModel
             };
 
             return View(model);
