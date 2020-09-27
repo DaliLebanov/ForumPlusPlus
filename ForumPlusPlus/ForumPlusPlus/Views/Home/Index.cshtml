@@ -1,61 +1,107 @@
 ﻿@model ForumIndexModel
 
-<div class="container body-content">
-    <div class="row frontPageSplash">
-        <div class="col-md-6 frontPageLearn">
-            <div class="frontPageHeading">Learn, Collaborate, Share Knowlage</div>
-            <p class="frontPageSubHeading">Forum ++ is the world's fastest growing forum</p>
-            <div>
-                <form asp-controller="Search" asp-action="Search" method="post">
-                    <input asp-for="SearchQuery" type="text" class="homeSearch" placeholder="Search..." />
-                </form>
+    <div class="container body-content">
+        <div class="row frontPageSplash">
+            <div class="col-md-6 frontPageLearn">
+                <div class="frontPageHeading">Learn, Collaborate, Share Knowlage</div>
+                <p class="frontPageSubHeading">Forum ++ is the world's fastest growing forum</p>
+                <div>
+                    <form asp-controller="Search" asp-action="Search" method="post">
+                        <input asp-for="SearchQuery" type="text" class="homeSearch" placeholder="Search..." />
+                    </form>
+                </div>
             </div>
+            <div class="col-md-6"></div>
         </div>
-        <div class="col-md-6"></div>
-    </div>
 
-    <div class="row frontPageContent">
-        <h3 id="latestsPosts">Latest Posts</h3>
-        <table class="table table-hover" id="latestsPostsTable">
-            <tbody>
-                @foreach(var post in Model.LatestPosts)
-                {
-                    <tr>
-                        <td>
-                            <div class="forumLogo" style="background-image: url(@post.Forum.ImageUrl); background-size:100%;"></div>
-                            <div class="postTitle">
-                                <a asp-controller="Post" asp-action="Index" asp-route-postId="@post.Id">
-                                    @post.Title
-                                </a>
-                            </div>
-                            <div class="postSubTitle">
-                                @if (post.RepliesCount == 1)
-                                {
-                                    <span>@post.RepliesCount Reply</span>
-                                }
-                                @if (post.RepliesCount == 0)
-                                {
-                                    <span>No Replies</span>
-                                }
-                                else
-                                {
-                                    <span>@post.RepliesCount Replies</span>
-                                }
-                                <span class="postUser">
-                                <a 
-                                   asp-controller="Profile" 
-                                   asp-action="Detail" 
-                                   asp-route-userId="@post.AuthorId">
-
-                                    @post.AuthorName
-
+        <div class="row frontPageContent">
+            <h3 id="latestsPosts">Latest Posts</h3>
+            <table class="table table-hover" id="latestsPostsTable">
+                <tbody>
+                    @foreach (var post in Model.LatestPosts)
+                    {
+                        <tr>
+                            <td>
+                                <div class="forumLogo" style="background-image: url(@post.Forum.ImageUrl); background-size:100%;"></div>
+                                <div class="postTitle">
+                                    <a asp-controller="Post" asp-action="Index" asp-route-postId="@post.Id">
+                                        @post.Title
                                     </a>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                                </div>
+                                <div class="postSubTitle">
+                                    @if (post.RepliesCount == 0)
+                                    {
+                                        <span>No Replies</span>
+                                    }
+                                    else if (post.RepliesCount == 1)
+                                    {
+                                        <span>@post.RepliesCount Reply</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@post.RepliesCount Replies</span>
+                                    }
+                                    <span class="postUser">
+                                        Post by:
+                                        <a asp-controller="Profile"
+                                           asp-action="Detail"
+                                           asp-route-userId="@post.AuthorId">
+
+                                            @post.AuthorName
+
+                                        </a>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <div class="row frontPageContent">
+            <h3 id="latestsPosts">Latest Forums</h3>
+            <table class="table table-hover" id="latestsPostsTable">
+                <tbody>
+                    @foreach (var forum in Model.ForumViewModels)
+                    {
+                        <tr>
+                            <td>
+                                <div class="forumLogo" style="background-image: url(@forum.ImageUrl); background-size:100%;"></div>
+                                <div class="postTitle">
+                                    <a asp-controller="Forum" asp-action="Topic" asp-route-forumId="@forum.Id">
+                                        @forum.Name
+                                    </a>
+                                </div>
+                                <div class="postSubTitle">
+                                    @if (forum.PostsCount == 0)
+                                    {
+                                        <span>No posts</span>
+                                    }
+                                    else if (forum.PostsCount == 1)
+                                    {
+                                        <span>@forum.PostsCount post</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@forum.PostsCount posts</span>
+                                    }
+
+
+
+                                    <span class="postUser">
+                                        Forum by:
+                                        <a asp-controller="Profile"
+                                           asp-action="Detail"
+                                           asp-route-userId="@forum.UserId">
+                                            @forum.UserName (@forum.UserRating)
+                                        </a>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>

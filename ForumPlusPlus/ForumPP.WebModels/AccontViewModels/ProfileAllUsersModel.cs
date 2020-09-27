@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ForumPP.WebModels.AccontViewModels
 {
-    public class ProfileDetailModel
+    public class ProfileAllUsersModel
     {
-        IEnumerable<ProfileModel> Profiles { get; set; }
+        public IEnumerable<ProfileViewModel> Profiles { get; set; }
     }
 }

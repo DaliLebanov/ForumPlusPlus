@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ForumPP.DataAccess.Migrations
 {
-    public partial class IS_THIS_IT : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,22 +49,6 @@ namespace ForumPP.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Forums",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Created = table.Column<DateTime>(nullable: false),
-                    ImageUrl = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Forums", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -174,6 +158,29 @@ namespace ForumPP.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Forums",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Title = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    Created = table.Column<DateTime>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Forums", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Forums_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Posts",
                 columns: table => new
                 {
@@ -230,6 +237,21 @@ namespace ForumPP.DataAccess.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "d02489fb-35aa-4da3-8a93-a99b24cc18bc", "9a83e1e0-04e5-4f2d-b5dd-164c2b433073", "admin", "ADMIN" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "IsActive", "LockoutEnabled", "LockoutEnd", "MemberSince", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfileImageUrl", "Rating", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "52ce8999-c237-4ae7-82af-0f63206747b8", 0, "dadab1bd-b310-4704-8136-ba80bc3fa514", "admin@mail.com", true, false, false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@mail.com", "ADMIN@MAIL.COM", "AQAAAAEAACcQAAAAEFhbZdVe9HCJZZYI+hrfC+++2cdDCivGdbqTzIc/+sJBgS6kQn1XsjSbZVl3rusumA==", null, false, null, 0, "", false, "admin@mail.com" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "UserId", "RoleId" },
+                values: new object[] { "52ce8999-c237-4ae7-82af-0f63206747b8", "d02489fb-35aa-4da3-8a93-a99b24cc18bc" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -268,6 +290,11 @@ namespace ForumPP.DataAccess.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Forums_UserId",
+                table: "Forums",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PostReplies_PostId",

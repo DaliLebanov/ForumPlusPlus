@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForumPP.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200922131322_IS_THIS_IT")]
-    partial class IS_THIS_IT
+    [Migration("20200927101404_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,11 @@ namespace ForumPP.DataAccess.Migrations
 
                     b.Property<string>("Title");
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Forums");
                 });
@@ -145,6 +149,10 @@ namespace ForumPP.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new { Id = "52ce8999-c237-4ae7-82af-0f63206747b8", AccessFailedCount = 0, ConcurrencyStamp = "dadab1bd-b310-4704-8136-ba80bc3fa514", Email = "admin@mail.com", EmailConfirmed = true, IsActive = false, LockoutEnabled = false, MemberSince = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), NormalizedEmail = "admin@mail.com", NormalizedUserName = "ADMIN@MAIL.COM", PasswordHash = "AQAAAAEAACcQAAAAEFhbZdVe9HCJZZYI+hrfC+++2cdDCivGdbqTzIc/+sJBgS6kQn1XsjSbZVl3rusumA==", PhoneNumberConfirmed = false, Rating = 0, SecurityStamp = "", TwoFactorEnabled = false, UserName = "admin@mail.com" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -169,6 +177,10 @@ namespace ForumPP.DataAccess.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new { Id = "d02489fb-35aa-4da3-8a93-a99b24cc18bc", ConcurrencyStamp = "9a83e1e0-04e5-4f2d-b5dd-164c2b433073", Name = "admin", NormalizedName = "ADMIN" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -240,6 +252,10 @@ namespace ForumPP.DataAccess.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new { UserId = "52ce8999-c237-4ae7-82af-0f63206747b8", RoleId = "d02489fb-35aa-4da3-8a93-a99b24cc18bc" }
+                    );
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -255,6 +271,13 @@ namespace ForumPP.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ForumPP.DataAccess.DbModels.Forum", b =>
+                {
+                    b.HasOne("ForumPP.DataAccess.DbModels.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("ForumPP.DataAccess.DbModels.Post", b =>

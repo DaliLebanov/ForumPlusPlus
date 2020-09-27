@@ -15,11 +15,17 @@ namespace ForumPlusPlus.Controllers
     {
         private readonly IForum _forumService;
         private readonly IPost _postService;
-        //private readonly UserManager _userManager;
-        public ForumController(IForum forumService, IPost postService)
+        private readonly UserManager<User> _userManager;
+        private readonly IUserService _userService;
+        public ForumController(IForum forumService,
+                                IPost postService,
+                                UserManager<User> userManager,
+                                IUserService userService)
         {
             _forumService = forumService;
             _postService = postService;
+            _userManager = userManager;
+            _userService = userService;
         }
 
         public IActionResult Index()
@@ -30,8 +36,10 @@ namespace ForumPlusPlus.Controllers
                     Id = forum.Id,
                     Name = forum.Title,
                     Description = forum.Description,
-                    PostsCount= forum.Posts.Count()
-                    
+                    PostsCount = forum.Posts.Count(),
+                    UserName = forum.User.UserName,
+                    UserRating = forum.User.Rating,
+                    Created = forum.Created
                 });
             
             
@@ -54,13 +62,16 @@ namespace ForumPlusPlus.Controllers
                 Id=forum.Id,
                 Description=forum.Description,
                 Name=forum.Title,
-                ImageUrl=forum.ImageUrl
+                ImageUrl=forum.ImageUrl,
+                UserName= forum.User.UserName,
+                UserRating=forum.User.Rating,
+                Created=forum.Created
             };
 
             var postViewModels = posts.Select(p => new PostViewModel
             {
                 Id = p.Id,
-                AuthorId = p.UserId,
+                AuthorId = p.User.Id,
                 AuthorRating = p.User.Rating,
                 AuthorName = p.User.UserName,
                 Title = p.Title,
@@ -77,6 +88,28 @@ namespace ForumPlusPlus.Controllers
             };
 
             return View(model);
+        }
+
+        public IActionResult CreateForum()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateForum(ForumViewModel forum)
+        {
+            var user = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            var model = new Forum
+            {
+                ImageUrl = forum.ImageUrl,
+                Description = forum.Description,
+                Created = DateTime.Now,
+                Title = forum.Name,
+                User = user,
+            };
+
+            _forumService.Create(model);
+            _userService.IncementRating(user.Id, typeof(Forum));
+            return RedirectToAction("Index", "Forum");
         }
 
         [HttpPost]

@@ -1,17 +1,35 @@
 ﻿@model NewPostViewModel
 
-<h1>New post for @Model.ForumName forum</h1>
 
-<form asp-controller="Post" asp-action="Create" method="post" id="addPostForm">
-    <input hidden asp-for="ForumId" />
-    <input hidden asp-for="AuthorName" />
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" />
+<div class="container body-content">
+    <div class="row sectionHeader">
+        <div class="sectionHeading">
+            New Post for <strong>@Model.ForumName </strong>Topic
+            <div class="forumLogo" style="background-image:url(@Model.ForumImageUrl)"></div>
+            <span id="headingBtn" >
+                
+                <a asp-controller="Forum" asp-action="Topic" asp-route-forumId="@Model.ForumId" class="btn btn-back ">
+                    <span class="glyphicon glyphicon-chevron-left"></span>  @Model.ForumName
+                </a>
+            </span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Content"></label>
-        <input asp-for="Content"  class="form-control"/>
+    <div class="row">
+        <div class="createPostSection">
+
+            <form asp-controller="Post" asp-action="Create" method="post" id="addPostForm">
+                <input hidden asp-for="ForumId" />
+                <input hidden asp-for="AuthorName" />
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content"></label>
+                    <textarea asp-for="Content" rows="15" class="form-control"></textarea>
+                </div>
+                <button type="submit" id="submitPostBtn" class="btn btn-submitPost">Submit Post</button>
+            </form>
+        </div>
     </div>
-    <button type="submit" id="submitPostBtn" class="btn btn-submitPost">Submit Post</button>
-</form>
+</div>

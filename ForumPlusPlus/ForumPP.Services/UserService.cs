@@ -45,6 +45,8 @@ namespace ForumPP.Services
                 newUserRating = 1;
             if (type == typeof(PostReply))
                 newUserRating = 3;
+            if (type == typeof(Forum))
+                newUserRating = 1;
 
             user.Rating += newUserRating;
 

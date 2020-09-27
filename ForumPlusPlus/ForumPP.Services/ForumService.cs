@@ -18,9 +18,10 @@ namespace ForumPP.Services
             _context = context;
         }
 
-        public Task Create(Forum forum)
+        public int Create(Forum forum)
         {
-            throw new NotImplementedException();
+            _context.Add(forum);
+            return _context.SaveChanges();
         }
 
         public Task Delete(int forumId)
@@ -30,7 +31,9 @@ namespace ForumPP.Services
 
         public IEnumerable<Forum> GetAll()
         {
-            return _context.Forums.Include(f=> f.Posts);
+            return _context.Forums
+                .Include(f => f.Posts)
+                .Include(f => f.User);
         }
 
         public IEnumerable<User> GetAllActiveUsers()
@@ -42,6 +45,7 @@ namespace ForumPP.Services
         {
 
             var forum = _context.Forums.Where(f => f.Id == Id)
+                .Include(f => f.User)
                  .Include(f => f.Posts)
                      .ThenInclude(p => p.User)
                  .Include(f => f.Posts)
@@ -54,7 +58,7 @@ namespace ForumPP.Services
 
         public IEnumerable<Forum> GetLatestForums(int n)
         {
-            return GetAll().OrderByDescending(f => f.Posts.Count()).Take(10);
+            return GetAll().OrderByDescending(f => f.Posts.Count()).Take(n);
         }
 
         public Task UpdateForumDescription(int forumId, string newDescription)

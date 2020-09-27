@@ -14,5 +14,10 @@ namespace ForumPlusPlus.Models.ForumViewModels
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public int PostsCount { get; set; }
+        public string UserId { get; set; }
+        public string UserName { get; set; }
+        public int UserRating { get; set; }
+        public DateTime Created { get; set; }
+       
     }
 }

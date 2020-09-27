@@ -109,12 +109,12 @@ using ForumPlusPlus.Models.ReplyViewModels;
             WriteLiteral("</span>\r\n            ");
             EndContext();
             BeginContext(218, 450, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75e92bb9861f4128a0103f84dd195c93", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd10576f19874e4f8d12aedf8cf2eae2", async() => {
                 BeginContext(282, 65, true);
                 WriteLiteral("\r\n                <div class=\"searchForum\">\r\n                    ");
                 EndContext();
                 BeginContext(347, 111, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1fb216abb1314168a89867c6156fdd68", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "22391ed191364ddc874e60d7b9fc8535", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -183,7 +183,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral("                        <tr>\r\n                            <td>\r\n                                <div class=\"postData\">\r\n                                    <div class=\"postTitle\">\r\n                                        ");
             EndContext();
             BeginContext(1197, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94f358a9b184466b868f2a31db0f4ba5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "398e775ddcc742d4a0154c840b16437b", async() => {
                 BeginContext(1270, 10, false);
 #line 28 "C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\Views\Search\Results.cshtml"
                                                                                                            Write(post.Title);
@@ -230,7 +230,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                                                 ");
             EndContext();
             BeginContext(1610, 206, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3159767e5c064e6bb55cf2c07df20a25", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aca5fe48e4054e13b8b0e23fabb1cab6", async() => {
                 BeginContext(1692, 54, true);
                 WriteLiteral("\r\n                                                    ");
                 EndContext();
@@ -287,7 +287,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             WriteLiteral(")\r\n                                            </span>\r\n                                            in:\r\n                                            <span class=\"postForum\">\r\n                                                ");
             EndContext();
             BeginContext(2108, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "77f0aff7ba7d42848da6a3d45ac04fed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef3a0b2a77a0432c9f52f0844da6688b", async() => {
                 BeginContext(2189, 15, false);
 #line 41 "C:\Users\Dali\Desktop\ForumPlusPlus\ForumPlusPlus\ForumPlusPlus\Views\Search\Results.cshtml"
                                                                                                                            Write(post.Forum.Name);

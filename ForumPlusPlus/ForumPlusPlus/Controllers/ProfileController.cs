@@ -17,17 +17,15 @@ namespace ForumPlusPlus.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly IUserService _userService;
-        private readonly IUploader _uploader;
+        
         private readonly IHostingEnvironment _hostingEnvironment;
 
         public ProfileController(UserManager<User> userManager, 
                                     IUserService userService, 
-                                    IUploader uploader,
                                     IHostingEnvironment hostingEnvironment)
         {
             _userManager = userManager;
             _userService = userService;
-            _uploader = uploader;
             _hostingEnvironment = hostingEnvironment;
         }
 
@@ -35,7 +33,7 @@ namespace ForumPlusPlus.Controllers
         {
             var user = _userManager.FindByIdAsync(userId).Result;
             
-            var viewModel = new ProfileModel
+            var viewModel = new ProfileViewModel
             {
                 UserId = user.Id,
                 UserName = user.UserName,
@@ -96,6 +94,27 @@ namespace ForumPlusPlus.Controllers
             }
 
             return RedirectToAction("Detail", new { userId = user.Id, errorMassage ="Please select a JPG or PNG file" });
+        }
+
+        public IActionResult AllUsers()
+        {
+            var allUsers = _userService.GetAll()
+                .OrderByDescending(u => u.Rating)
+                .Select(u => new ProfileViewModel
+                {
+                    Email = u.Email,
+                    UserName=u.UserName,
+                    ProfileImageUrl=u.ProfileImageUrl,
+                    UserRating=u.Rating.ToString(),
+                    MemberSince = u.MemberSince
+                });
+
+            var model = new ProfileAllUsersModel
+            {
+                Profiles= allUsers
+            };
+
+            return View(model);
         }
     }
 }

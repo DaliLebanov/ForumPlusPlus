@@ -33,7 +33,6 @@ body {
     font-size: 1.3em;
     font-family: Roboto;
     padding: 16px 0 16px 0;
-    border-bottom: 1px solid #335;
     margin-bottom: 12px;
 }
 
@@ -186,15 +185,52 @@ body {
     background-color:#212121;
     padding:8px 0px 24px 24px;
 }
-/*Custom Topic Page Styles*/
+/*Replies CSS*/
+.replyContent{
+    display:table;
+    background-color:#fff;
+    border-bottom: 1px solid #aaa; 
+    width:99%;
+    padding-top:5px;
+    margin-left:25px;
+    margin-bottom:25px;
+}
 
-.searchBar{
-    padding:3px 5px 2px 12px;
-    margin:8px;
-    background-color:#333;
-    width:10%;
+.replyContentContainer, .replyAuthorContainer{
+    display:table-cell;
+    padding-right:0px;
+}
+
+.isAdmin{
+    display:inline-block;
+    padding:3px;
+    background-color:#FFEB3B;
+    color:#000;
+    font-family:Roboto;
+}
+.smaller{
+    font-size:0.8em;
+}
+#postReplyRow{
+    padding:10px 5px 30px 7px;
+}
+#originalPost{
+    background-color:#fff;
+    padding:12px;
+    border-bottom: 1px solid black;
+}
+#replyToPostSection {
+    
+    margin:0px
+}
+/*Custom Topic Page Styles*/
+.searchBar {
+    padding: 3px 5px 2px 12px;
+    margin: 8px;
+    background-color: #333;
+    width: 10%;
     transition: ease 0.3s;
-    border:none;
+    border: none;
 }
 
 .searchBar:focus{
@@ -282,11 +318,11 @@ body {
 }
 /*Forum Index*/
 #forumIndexTable td {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.7);
 }
 
 #forumIndexTable tr:hover {
-    background-color: rgba(0,116,238,1);
+    background-color: rgba(0,116,238,0.7);
 }
 
 .forumData{
@@ -375,10 +411,6 @@ body {
     background-color: #fff;
     padding:24px;
 }
-
-
-
-
 
 
 /* Wrapping element */

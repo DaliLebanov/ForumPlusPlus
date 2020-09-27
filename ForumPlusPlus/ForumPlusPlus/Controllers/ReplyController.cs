@@ -35,12 +35,13 @@ namespace ForumPlusPlus.Controllers
                 PostContent = post.Content,
                 PostTitle = post.Title,
                 PostId = post.Id,
+                ForumName = post.Forum.Title,
 
                 AuthorId = user.Id,
                 AuthorName = user.UserName,
                 AuthorImageUrl = user.ProfileImageUrl,
                 AuthorRating = user.Rating,
-                IsAuthorAdmin = User.IsInRole("admin"),
+                IsAuthorAdmin = _userManager.GetRolesAsync(post.User).Result.Contains("admin"),
 
                 Created = DateTime.Now
             };

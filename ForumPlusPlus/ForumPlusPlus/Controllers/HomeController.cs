@@ -21,8 +21,8 @@ namespace ForumPlusPlus.Controllers
 
         public IActionResult Index()
         {
-            var latestPosts = _postService.GetLatestPosts(10);
-            var latestForums = _forumService.GetLatestForums(10);
+            var latestPosts = _postService.GetLatestPosts(5);
+            var latestForums = _forumService.GetLatestForums(5);
 
             var latestForumsMapped = latestForums.Select(f => new ForumViewModel
             {
@@ -30,6 +30,10 @@ namespace ForumPlusPlus.Controllers
                 Description = f.Description,
                 ImageUrl = f.ImageUrl,
                 Name = f.Title,
+                UserId = f.User.Id,
+                UserName = f.User.UserName,
+                UserRating = f.User.Rating,
+                Created = f.Created,
                 PostsCount = f.Posts.Count()
             });
 
@@ -37,7 +41,7 @@ namespace ForumPlusPlus.Controllers
             {
                 Id = p.Id,
                 Title = p.Title,
-                AuthorId = p.UserId,
+                AuthorId = p.User.Id,
                 AuthorName = p.User.UserName,
                 AuthorRating = p.User.Rating,
                 DatePosted=p.Created.ToString(),

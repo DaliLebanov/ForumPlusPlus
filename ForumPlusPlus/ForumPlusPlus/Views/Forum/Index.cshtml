@@ -1,24 +1,38 @@
-﻿@model ForumIndexModel 
+﻿@model ForumIndexModel
 
 <h1>Forums</h1>
+@if (User.Identity.IsAuthenticated)
+{
+    <span id="headingBtn">
+        <a asp-controller="Forum" asp-action="CreateForum"  class="btn btn-newPost">Create Forum Topic</a>
+    </span>
+    
+}
 
-<table class="table table-hover" id="forumIndexTable"> 
+<table class="table table-hover" id="forumIndexTable">
     <tbody>
-        @foreach(var forum in Model.ForumViewModels)
+        
+        @foreach (var forum in Model.ForumViewModels)
         {
-        <tr>
-            <td>
-                <a asp-controller="Forum" asp-action="Topic" asp-route-forumId="@forum.Id">
-                    @forum.Name
-                </a>
-            </td>
-            <td>
-                @forum.Description
-            </td>
-            <td>
-                Posts: @forum.PostsCount
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <a asp-controller="Forum" asp-action="Topic" asp-route-forumId="@forum.Id">
+                        @forum.Name
+                    </a>
+                </td>
+                <td>
+                    @forum.Description
+                </td>
+                <td>
+                    Created by: @forum.UserName (@forum.UserRating)
+                </td>
+                <td>
+                    Created: @forum.Created.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    Posts: @forum.PostsCount
+                </td>
+            </tr>
         }
     </tbody>
 </table>
